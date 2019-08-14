@@ -1,0 +1,19 @@
+
+.large{
+    font-size: 100px;
+    margin: 5px;
+    
+}
+.medium{
+    font-size: 40px;
+}
+.small{
+    font-size: 60px;
+}
+
+
+.marginClass{
+    margin: 5px;
+    display: inline-block;
+    
+}

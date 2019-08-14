@@ -1,0 +1,92 @@
+<div class="container">
+        <div class="jumbotron">
+            <div class="row">
+            <div class="col">
+                <h4>Pedido online:</h4>
+                <h6 style="font-style: italic">*Insira dados validos</h6>
+                <br>
+                <br>
+                <div class="form-group">
+                    <label>Nome:</label>
+                    <input class="form-control col-6" type="text" [value]="nome" (input)="atualizaNome($event)">
+                    <label>Endereço:</label>
+                    <input class="form-control col-6" type="text" [value]="end" (input)="atualizaEnd($event)">
+                    <label>Telefone/Celular:</label>
+                    <input maxlength=10 placeholder="Insira seu número" class="form-control col-6" 
+                    type="text" [value]="contato" (input)="atualizaContato($event)">
+                    <label>Diga o sabor de seu Pedido   (Sabor,Tamanho, Borda):</label>
+                   <textarea placeholder="Exemplo: Calabresa com Mussarela, Média, Sem Borda." class="form-control"
+                   [value]="pedido" (input)="atualizaPedido($event)"></textarea>
+                </div>
+            </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-end  ">
+                    <button class="btn btn-primary " (click)="gerarPedido();gerarDiv()">ENVIAR PEDIDO E ACOMPANHAR ONLINE</button>
+                  
+                    </div>
+                    <br>
+                    <h6>Entraremos em contato com o seu número após o envio do pedido para confirmar a entrega.</h6>
+                    <h6>(O contato geralmente leva em torno de 10 min)</h6>
+                </div>
+            </div>
+
+           
+
+            <div *ngIf="criarPedido" class="row" id="teste">
+                <div class="col">
+                    <div >
+                        
+                         
+                    <br>
+                    <br>
+                       <h1 style="margin-left:50px;margin-right: 50px;">Seu Pedido <hr></h1>
+                       
+                      
+                       
+
+                       
+                        <div class="row">
+                            
+                           <div class="pedido">
+                                
+                               
+                                <ul style="list-style: none; font-size: 20px; color: black;" >
+                                    <li>Nome:&nbsp;{{Pedido.nome}}</li>
+                                    <li> Contato:&nbsp;{{Pedido.contato}}</li>
+                                    <li>Endereço:&nbsp;{{Pedido.end}}</li>
+                                    <li> Pedido:&nbsp;{{Pedido.pedido}}</li>
+                                </ul>
+                            
+                            </div>
+
+                            <div class="col-lg d-flex justify-content-end" style="padding:15px;">
+                                    <h5>STATUS: </h5><h5 class="col-lg-" style="color:green">&nbsp;Aguarde, estamos entrando em contato!</h5>
+                                    <br>
+                                  
+                              </div> 
+                        
+                                
+
+                        </div>
+                                              
+                        </div>
+                        <h5 class="d-flex justify-content-end" id="tempo">Tempo De Espera:</h5>
+                        <div class="d-flex justify-content-end">
+               
+                        <cronometro class="cronometro"></cronometro>
+                    </div>
+                   
+                      
+                   
+                </div>
+            </div>
+
+  
+  
+
+        </div>   
+     
+</div>

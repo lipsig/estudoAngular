@@ -1,0 +1,31 @@
+.jumbotron {
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;   
+
+}
+
+.cronometro{
+   
+    padding: 10px;
+    font-family: 'Istok Web', sans-serif;
+    text-align: right;
+    margin-right: 100px;}
+
+.pedido {
+
+    margin-left: 30px;
+    padding: 10px;
+}
+
+#teste{
+    border: solid 2px rgb(255, 255, 255);
+    border-radius: 15px;
+    background-color: rgb(228, 228, 228);
+    margin-top:20px;
+    height: auto;
+}
+
+#tempo{
+    margin-right: 150px;
+}
